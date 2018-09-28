@@ -1,6 +1,6 @@
 # Proyecto Vengadores
 
-<<<<<<< HEAD
+
 ## Descripción del proyecto.
 
 El proyecto se basa en la creación de un servicio web de noticias 
@@ -60,8 +60,3 @@ funcionamiento.
 5. Creación de noticias para el despliegue del servicio.
 
 6. Despliegue del servicio.
-=======
-Repositorio que se usará para la asignatura de Infraestructura Virtual.
-
-- [Documentos del proyecto](https://github.com/Davidj231996/Proyecto-Vengadores/tree/master/doc)
->>>>>>> d64901feeff9d3c20904ca6ccb00bd9b1b98c5f3
