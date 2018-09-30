@@ -10,6 +10,8 @@ podrá ordenarlas por diferentes categorias.
 
 ## Herramientas
 
+Estas son las herramientas que voy a usar para el proyecto:
+
 - Azure
 
 Voy a usar Azure debido a su facilidad para conectarlo con Vagrant y 
@@ -46,6 +48,8 @@ La infraestructura del servicio será la siguiente:
 noticias almacenadas en la base de datos.
 
 ## Pasos a llevar a cabo.
+
+Los pasos a seguir durante el proyecto son:
 
 1. Creación de cuenta en todas las herramientas necesarias.
 
