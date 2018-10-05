@@ -38,6 +38,11 @@ con python es bastante sencilla y fácil de conectar desde el lenguaje.
 Python va a ser el lenguaje de programación a usar, debido a que se 
 trata de un lenguaje nuevo para mi y a su fácilidad de uso con MongoDB.
 
+- Flask
+
+Flask va a ser mi framework de servicio web, debido a que es un 
+framework de Python y a su facilidad de instalación y uso.
+
 ## Infraestructura
 
 La infraestructura del servicio será la siguiente:
