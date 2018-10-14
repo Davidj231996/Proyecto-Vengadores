@@ -3,7 +3,6 @@ from pruebas import Noticiario
 
 def test_crear_Noticia():
 	n = Noticiario()
-	assert n.crear_Noticia("Golf","El golf es un deporte")==0, "Error en la creación de la noticia"
 	assert n.crear_Noticia("El golf","El golf es un deporte en crecimiento")==0, "Error en la creación de la noticia"
 
 def test_crear_Usuario():
