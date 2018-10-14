@@ -69,3 +69,21 @@ funcionamiento.
 5. Creación de noticias para el despliegue del servicio.
 
 6. Despliegue del servicio.
+
+## Tests
+
+Los test que voy a realizar, se van a usar para el control en la creación de noticias y de usuarios.
+
+## Instalación de las herramientas necesarias
+
+Para instalar las herramientas necesarias, ejecutaremos la siguiente orden:
+
+pip install -r requirements.txt
+
+## Ejecución de los test
+
+Usaremos pytest.
+
+## Ejecución
+
+python3 pruebas.py
