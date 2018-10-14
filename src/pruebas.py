@@ -1,25 +1,22 @@
 class Noticiario():
 	"""Clase para el microservicio Noticiario"""
 
-	def __init__(self):
-		self.__noticias = 0;
-
-	def crear_Noticia(titulo, descripcion):
+	def crear_Noticia(titulo,descripcion):
 		if(len(titulo) < 10):
-			return -1
+			return False
 		elif(len(titulo) > 50):
-			return -2
+			return False
 		elif(len(descripcion) < 0):
-			return -3
+			return False
 		else:
-			return 0
+			return True
 
-	def crear_Usuario(nombre, alias):
+	def crear_Usuario(nombre,alias):
 		if(len(nombre) < 3):
-			return -1
+			return False
 		elif(len(alias) < 5):
-			return -2
+			return False
 		elif(len(alias) > 15):
-			return -3
+			return False
 		else:
-			return 0
+			return True
