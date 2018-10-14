@@ -1,7 +1,7 @@
 class Noticiario():
 	"""Clase para el microservicio Noticiario"""
 
-	def crear_Noticia(titulo,descripcion):
+	def crear_Noticia(self,titulo,descripcion):
 		if(len(titulo) < 10):
 			return False
 		elif(len(titulo) > 50):
@@ -11,7 +11,7 @@ class Noticiario():
 		else:
 			return True
 
-	def crear_Usuario(nombre,alias):
+	def crear_Usuario(self,nombre,alias):
 		if(len(nombre) < 3):
 			return False
 		elif(len(alias) < 5):
