@@ -43,4 +43,4 @@ usuarios.
 
 ## Por qué he elegido estas herramientas de test e integración continua:
 
-[Visitar](https://github.com/Davidj231996/Proyecto-Vengadores/tree/master/docs)
+[Visitar](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/explicacion.md)
