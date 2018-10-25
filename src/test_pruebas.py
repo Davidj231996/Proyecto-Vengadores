@@ -11,7 +11,7 @@ def test_cuentaNoticias():
 
 def test_crear_Noticia():
 	n = Noticiario()
-	assert n.crear_Noticia("El Clásico más importante","El Clásico del 28-O es de vital importancia para ambos equipos","Futbol")==2, "Error en la creacion"
+	assert n.crear_Noticia("El Clásico más importante","El Clásico del 28-O es de vital importancia para ambos equipos","Futbol")==3, "Error en la creacion"
 
 def test_cuentaNoticias_postCreacion():
 	n = Noticiario()

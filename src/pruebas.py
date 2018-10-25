@@ -43,7 +43,9 @@ class Noticiario():
 
 		self.__noticiai = len(self.noticias)
 		self.noticias[self.__noticiai]["titulo"] = titulo
-		elf.noticias[self.__noticiai]["descripcion"] = descripcion
+		self.noticias[self.__noticiai]["descripcion"] = descripcion
 		self.noticias[self.__noticiai]["categoria"] = categoria
-		
+
+		self.noticias.append({"titulo":titulo, "descripcion":descripcion, "categoria":categoria})
+		self.__noticiai = len(self.noticias)
 		return self.__noticiai
