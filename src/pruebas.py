@@ -5,7 +5,7 @@ class Noticiario():
 	"""Clase para el microservicio Noticiario"""
 
 	def __init__(self):
-		noticia_i = 0
+		noticia_i=0
 		try:
 			if os.path.exists('data/noticias.json'):
 				with open('data/noticias.json', 'r') as f:
