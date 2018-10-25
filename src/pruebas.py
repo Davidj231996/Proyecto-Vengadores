@@ -45,4 +45,4 @@ class Noticiario():
 		#elf.noticias[self.__noticiai]["descripcion"] = descripcion
 		#self.noticias[self.__noticiai]["categoria"] = categoria
 		print(self.__noticiai)
-		return True
+		return self.__noticiai
