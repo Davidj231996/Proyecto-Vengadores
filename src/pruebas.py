@@ -40,9 +40,10 @@ class Noticiario():
 			return False
 		elif(Noticiario.categoria_correcta(self,categoria)==False):
 			return False
-		#self.noticias[self.__noticiai]["titulo"] = titulo
-		#elf.noticias[self.__noticiai]["descripcion"] = descripcion
-		#self.noticias[self.__noticiai]["categoria"] = categoria
+
 		self.__noticiai = len(self.noticias)
-		print(self.__noticiai)
+		self.noticias[self.__noticiai]["titulo"] = titulo
+		elf.noticias[self.__noticiai]["descripcion"] = descripcion
+		self.noticias[self.__noticiai]["categoria"] = categoria
+		
 		return self.__noticiai
