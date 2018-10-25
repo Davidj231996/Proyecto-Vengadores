@@ -41,10 +41,10 @@ class Noticiario():
 		elif(Noticiario.categoria_correcta(self,categoria)==False):
 			return False
 
-		self.__noticiai = len(self.noticias)
-		self.noticias[self.__noticiai]["titulo"] = titulo
-		self.noticias[self.__noticiai]["descripcion"] = descripcion
-		self.noticias[self.__noticiai]["categoria"] = categoria
+		#self.__noticiai = len(self.noticias)
+		#self.noticias[self.__noticiai]["titulo"] = titulo
+		#self.noticias[self.__noticiai]["descripcion"] = descripcion
+		#self.noticias[self.__noticiai]["categoria"] = categoria
 
 		self.noticias.append({"titulo":titulo, "descripcion":descripcion, "categoria":categoria})
 		self.__noticiai = len(self.noticias)
