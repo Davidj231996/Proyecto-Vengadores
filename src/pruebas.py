@@ -6,21 +6,21 @@ class Noticiario():
 
 	def __init__(self):
 	noticia_i = 0
-        try:
-            if os.path.exists('data/noticias.json'):
-                with open('data/noticias.json', 'r') as f:
-                    self.noticias = json.load(f)
-            else:
-                raise IOError("No se encuentra 'noticias.json'")
+	try:
+		if os.path.exists('data/noticias.json'):
+			with open('data/noticias.json', 'r') as f:
+			self.noticias = json.load(f)
+		else:
+			raise IOError("No se encuentra 'noticias.json'")
 
-	    if os.path.exists('data/categorias.json'):
-		with open('data/categorias.json', 'r'r) as f:
-		    self.categorias = json.load(f)
-	    else:
-		raise IOError("No se encuentra 'data/categorias.json'")
+		if os.path.exists('data/categorias.json'):
+			with open('data/categorias.json', 'r'r) as f:
+			self.categorias = json.load(f)
+		else:
+			raise IOError("No se encuentra 'data/categorias.json'")
 
-        except IOError as fallo:
-             print("Error {} leyendo hitos.json".format( fallo ) )
+	except IOError as fallo:
+		print("Error {} leyendo hitos.json".format( fallo ) )
 
 	def cuentaNoticias(self):
 		self.noticia_i = len(self.noticias)
