@@ -6,8 +6,8 @@ def test_inicializar():
 	assert isinstance(n,Noticiario), "Error al inicializar"
 
 def test_cuentaNoticias():
-	n = Noticiario()
-	assert n.cuentaNoticias() == 2
+	n=Noticiario()
+	assert n.cuentaNoticias() == 2, "Error al contar"
 
 def test_crear_Noticia():
 	n = Noticiario()
