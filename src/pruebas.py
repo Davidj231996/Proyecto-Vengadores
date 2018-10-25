@@ -39,7 +39,7 @@ class Noticiario():
 			return False
 		elif(len(descripcion) < 0):
 			return False
-		elif(categoria_correcta(categoria)==False):
+		elif(categoria_correcta(self,categoria)==False):
 			return False
 		self.noticias[noticiai]["titulo"] = titulo
 		self.noticias[noticiai]["descripcion"] = descripcion
