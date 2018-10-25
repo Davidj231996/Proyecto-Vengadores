@@ -14,7 +14,7 @@ class Noticiario():
 				raise IOError("No se encuentra 'noticias.json'")
 
 			if os.path.exists('data/categorias.json'):
-				with open('data/categorias.json', 'r'r) as f:
+				with open('data/categorias.json', 'r') as f:
 					self.categorias = json.load(f)
 			else:
 				raise IOError("No se encuentra 'data/categorias.json'")
