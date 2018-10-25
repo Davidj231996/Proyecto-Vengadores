@@ -22,27 +22,27 @@ class Noticiario():
 		except IOError as fallo:
 			print("Error {} leyendo hitos.json".format( fallo ) )
 
-		def cuentaNoticias(self):
-			self.noticiai = len(self.noticias)
-			return len(self.noticias)
+	def cuentaNoticias(self):
+		self.noticiai = len(self.noticias)
+		return len(self.noticias)
 
-		def crear_Noticia(self,titulo,descripcion,categoria):
-			if(len(titulo) < 10):
-				return False
-			elif(len(titulo) > 50):
-				return False
-			elif(len(descripcion) < 0):
-				return False
-			elif(categoria_correcta(categoria)==False):
-				return False
-			self.noticias[noticiai]["titulo"] = titulo
-			self.noticias[noticiai]["descripcion"] = descripcion
-			self.noticias[noticiai]["categoria"] = categoria
-
-			return True
-
-		def categoria_correcta(self,categoria):
-			for i in self.categorias:
-				if(i == categoria):
-					return True
+	def crear_Noticia(self,titulo,descripcion,categoria):
+		if(len(titulo) < 10):
 			return False
+		elif(len(titulo) > 50):
+			return False
+		elif(len(descripcion) < 0):
+			return False
+		elif(categoria_correcta(categoria)==False):
+			return False
+		self.noticias[noticiai]["titulo"] = titulo
+		self.noticias[noticiai]["descripcion"] = descripcion
+		self.noticias[noticiai]["categoria"] = categoria
+
+		return True
+
+	def categoria_correcta(self,categoria):
+		for i in self.categorias:
+			if(i == categoria):
+				return True
+		return False
