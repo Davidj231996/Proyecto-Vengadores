@@ -5,7 +5,7 @@ class Noticiario():
 	"""Clase para el microservicio Noticiario"""
 
 	def __init__(self):
-		noticia_i=0
+		noticiai=0
 		try:
 			if os.path.exists('data/noticias.json'):
 				with open('data/noticias.json', 'r') as f:
@@ -23,7 +23,7 @@ class Noticiario():
 			print("Error {} leyendo hitos.json".format( fallo ) )
 
 		def cuentaNoticias(self):
-			self.noticia_i = len(self.noticias)
+			self.noticiai = len(self.noticias)
 			return len(self.noticias)
 
 		def crear_Noticia(self,titulo,descripcion,categoria):
@@ -35,9 +35,9 @@ class Noticiario():
 				return False
 			elif(!categoria_correcta(categoria)):
 				return False
-			self.noticias[noticia_i]["titulo"] = titulo
-			self.noticias[noticia_i]["descripcion"] = descripcion
-			self.noticias[noticia_i]["categoria"] = categoria
+			self.noticias[noticiai]["titulo"] = titulo
+			self.noticias[noticiai]["descripcion"] = descripcion
+			self.noticias[noticiai]["categoria"] = categoria
 
 			return True
 
