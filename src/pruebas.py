@@ -3,9 +3,9 @@ import os
 
 class Noticiario():
 	"""Clase para el microservicio Noticiario"""
-
+	noticiai=0
 	def __init__(self):
-		noticiai=0
+		
 		try:
 			if os.path.exists('data/noticias.json'):
 				with open('data/noticias.json', 'r') as f:
