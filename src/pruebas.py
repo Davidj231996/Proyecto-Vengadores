@@ -22,7 +22,7 @@ class Noticiario():
 		except IOError as fallo:
 			print("Error {} leyendo hitos.json".format( fallo ) )
 
-	def categoria_correcta(categoria):
+	def categoria_correcta(self,categoria):
 		for i in self.categorias:
 			if(i == categoria):
 				return True
