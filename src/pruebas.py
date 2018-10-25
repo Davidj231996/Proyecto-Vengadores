@@ -23,9 +23,9 @@ class Noticiario():
 			print("Error {} leyendo hitos.json".format( fallo ) )
 
 	def categoria_correcta(categoria):
-		#for i in self.categorias:
-		#	if(i == categoria):
-		#		return True
+		for i in self.categorias:
+			if(i == categoria):
+				return True
 		return False
 
 	def cuentaNoticias(self):
@@ -39,7 +39,7 @@ class Noticiario():
 			return False
 		elif(len(descripcion) < 0):
 			return False
-		elif(categoria_correcta(categoria)==False):
+		elif(Noticiario.categoria_correcta(categoria)==False):
 			return False
 		self.noticias[noticiai]["titulo"] = titulo
 		self.noticias[noticiai]["descripcion"] = descripcion
