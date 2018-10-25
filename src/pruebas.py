@@ -29,7 +29,6 @@ class Noticiario():
 		return False
 
 	def cuentaNoticias(self):
-		self.__noticiai = len(self.noticias)
 		return len(self.noticias)
 
 	def crear_Noticia(self,titulo,descripcion,categoria):
@@ -44,5 +43,6 @@ class Noticiario():
 		#self.noticias[self.__noticiai]["titulo"] = titulo
 		#elf.noticias[self.__noticiai]["descripcion"] = descripcion
 		#self.noticias[self.__noticiai]["categoria"] = categoria
+		self.__noticiai = len(self.noticias)
 		print(self.__noticiai)
 		return self.__noticiai
