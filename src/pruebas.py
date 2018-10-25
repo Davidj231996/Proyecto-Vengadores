@@ -8,7 +8,7 @@ class Noticiario():
 		self.__noticiai=0
 		try:
 			if os.path.exists('data/noticias.json'):
-				with open('data/noticias.json', 'rw') as f:
+				with open('data/noticias.json', 'r') as f:
 					self.noticias=json.load(f)
 			else:
 				raise IOError("No se encuentra 'noticias.json'")
@@ -40,11 +40,6 @@ class Noticiario():
 			return False
 		elif(Noticiario.categoria_correcta(self,categoria)==False):
 			return False
-
-		#self.__noticiai = len(self.noticias)
-		#self.noticias[self.__noticiai]["titulo"] = titulo
-		#self.noticias[self.__noticiai]["descripcion"] = descripcion
-		#self.noticias[self.__noticiai]["categoria"] = categoria
 
 		self.noticias.append({"titulo":titulo, "descripcion":descripcion, "categoria":categoria})
 		self.__noticiai = len(self.noticias)
