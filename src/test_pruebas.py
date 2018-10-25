@@ -1,6 +1,10 @@
 import pytest
 from pruebas import Noticiario
 
+def test_inicializar():
+	n=Noticiario()
+	assert isinstance(n,Noticiario), "Error al inicializar"
+
 def test_cuentaNoticias():
 	n = Noticiario()
 	assert n.cuentaNoticias() == 2
