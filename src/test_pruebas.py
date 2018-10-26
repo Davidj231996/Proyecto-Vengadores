@@ -27,4 +27,4 @@ def test_postEdicion():
 
 def test_eliminar():
 	n=Noticiario()
-	assert n.eliminarNoticia(2)==True, "Error al eliminar"
+	assert n.eliminarNoticia(2)==2, "Error al eliminar"
