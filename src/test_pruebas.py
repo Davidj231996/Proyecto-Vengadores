@@ -15,4 +15,4 @@ def test_crear_Noticia():
 
 def test_postCreacion():
 	n=Noticiario()
-	assert n.cuentaNoticias()=3, "Error al contar"
+	assert n.cuentaNoticias()==3, "Error al contar"
