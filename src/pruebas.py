@@ -63,6 +63,8 @@ class Noticiario():
 		self.noticias[indice-1]["descripcion"]=descripcion
 		self.noticias[indice-1]["categoria"]=categoria
 
+		with open('data/noticias.json', 'w') as outfile:
+			json.dump(self.noticias, outfile)
 
 		if(self.noticias[indice-1]["titulo"]!=titulo):
 			return False

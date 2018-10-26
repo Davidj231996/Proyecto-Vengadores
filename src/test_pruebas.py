@@ -20,3 +20,7 @@ def test_postCreacion():
 def test_editar():
 	n=Noticiario()
 	assert n.editarNoticia("El golf 2018","El golf es un deporte en disminución","Golf",1)==True, "Error en la edición"
+
+def test_postEdicion():
+	n=Noticiario()
+	assert n.cuentaNoticias()==3, "Error al contar"
