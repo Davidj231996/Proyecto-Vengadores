@@ -74,3 +74,11 @@ class Noticiario():
 			return False
 
 		return True
+
+	def eliminarNoticia(self,indice):
+		if(indice<=0 OR indice>=len(self.noticias)):
+			return False
+
+		self.noticias.pop(i)
+
+		return len(self.noticias)

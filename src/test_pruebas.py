@@ -24,3 +24,7 @@ def test_editar():
 def test_postEdicion():
 	n=Noticiario()
 	assert n.cuentaNoticias()==3, "Error al contar"
+
+def test_eliminar():
+	n=Noticiario()
+	assert n.eliminarNoticia(2)==True, "Error al eliminar"
