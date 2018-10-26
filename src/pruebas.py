@@ -82,3 +82,18 @@ class Noticiario():
 		self.noticias.pop(indice)
 
 		return len(self.noticias)
+
+	def mostrarNoticiasCategoria(self,categoria):
+		indice=0
+		num_noticias=0
+
+		for i in self.categorias:
+			if(i == categoria):
+				for i in self.categorias:
+					if(self.notiticas[indice]["categoria"]==categoria):
+						num_noticias = num_noticias + 1
+					indice = indice + 1
+
+		return num_noticias
+
+		

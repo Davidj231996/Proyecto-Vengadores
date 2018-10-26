@@ -28,3 +28,7 @@ def test_postEdicion():
 def test_eliminar():
 	n=Noticiario()
 	assert n.eliminarNoticia(2)==2, "Error al eliminar"
+
+def test_mostrarNoticiasCategoria():
+	n=Noticiario()
+	assert n.mostrarNoticiasCategoria("NBA")==1, "Error en el muestreo"
