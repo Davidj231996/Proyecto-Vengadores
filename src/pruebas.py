@@ -79,6 +79,6 @@ class Noticiario():
 		if(indice<=0 or indice>=len(self.noticias)):
 			return False
 
-		self.noticias.pop(i)
+		self.noticias.pop(indice)
 
 		return len(self.noticias)
