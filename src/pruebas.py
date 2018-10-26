@@ -43,4 +43,23 @@ class Noticiario():
 
 		self.noticias.append({"titulo":titulo, "descripcion":descripcion, "categoria":categoria})
 		self.__noticiai = len(self.noticias)
+
+		json.dumps(self.noticias)
+
 		return self.__noticiai
+
+	def editarNoticia(self,titulo,descripcion,categoria,indice):
+		if(len(titulo) < 10):
+			return False
+		elif(len(titulo) > 50):
+			return False
+		elif(len(descripcion) < 0):
+			return False
+		elif(Noticiario.categoria_correcta(self,categoria)==False):
+			return False
+
+		self.noticias[indice-1]["titulo"]=titulo
+		self.noticias[indice-1]["descripcion"]=descripcion
+		self.noticias[indice-1]["categoria"]=categoria
+
+		return len(self.noticias)
