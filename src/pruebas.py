@@ -66,7 +66,7 @@ class Noticiario():
 
 		if(self.noticias[indice-1]["titulo"]!=titulo):
 			return False
-		elif(self.noticias[indice-1]["descripcion"]!=descripcion):
+		#elif(self.noticias[indice-1]["descripcion"]!=descripcion):
 			return False
 		#elif(self.noticias[indice-1]["categoria"]!=categoria):
 			return False
