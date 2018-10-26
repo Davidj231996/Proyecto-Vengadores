@@ -89,7 +89,7 @@ class Noticiario():
 
 		for i in self.categorias:
 			if(i == categoria):
-				for i in self.categorias:
+				for i in self.noticias:
 					if(self.noticias[indice]["categoria"]==categoria):
 						num_noticias = num_noticias + 1
 					indice = indice + 1
