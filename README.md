@@ -38,9 +38,8 @@ python3 pruebas.py
 
 ## Uso
 
-El uso de los test sera para el control de la creación de noticias y de 
-usuarios.
+El uso de los tests será el siguiente: a través de dos archivos JSON (noticias y categorias), se realizará la creación de nuevas noticias y la comprobación correcta posterior.
 
 ## Por qué he elegido estas herramientas de test e integración continua:
 
-[Visitar](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/explicacion.md)
+[Visitar](https://davidj231996.github.io/Proyecto-Vengadores/docs/explicacion)
