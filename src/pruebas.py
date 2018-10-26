@@ -44,7 +44,8 @@ class Noticiario():
 		self.noticias.append({"titulo":titulo, "descripcion":descripcion, "categoria":categoria})
 		self.__noticiai = len(self.noticias)
 
-		json.dumps(self.noticias)
+		with open('data/noticias.json', 'w') as outfile:
+			json.dump(self.noticias, outfile)
 
 		return self.__noticiai
 
