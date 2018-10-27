@@ -3,9 +3,9 @@
 
 ## Descripción del proyecto.
 
-El proyecto se basa en la creación de un servicio web de noticias 
-deportivas. Las noticas se mostraran por deporte, y además, el usuario 
-podrá ordenarlas por diferentes categorias.
+En este proyecto se va a realizar un Noticiario de deporte, las noticias tendrán su título, descripción y su categoria.
+
+Sobre estas noticias, se va a poder crear nuevas, editar las existentes, eliminar y mostrar las de cierta categoria.
 
 
 ## Herramientas
@@ -26,7 +26,7 @@ Estas son las herramientas que voy a usar para el proyecto:
 
 Para instalar las herramientas necesarias, ejecutaremos la siguiente orden:
 
-pip install -r requirements.txt
+"pip install -r requirements.txt"
 
 ## Ejecución de los test
 
@@ -38,7 +38,8 @@ python3 pruebas.py
 
 ## Uso
 
-El uso de los tests será el siguiente: a través de dos archivos JSON (noticias y categorias), se realizará la creación de nuevas noticias y la comprobación correcta posterior.
+El uso de los tests será el siguiente: a través de dos archivos JSON (noticias y categorias), se realizará la gestión (creación, modificación, eliminación) de noticias y la muestra por 
+categorias.
 
 ## Por qué he elegido estas herramientas de test e integración continua:
 
