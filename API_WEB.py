@@ -16,22 +16,22 @@ def main():
     "ejemplos de Servicios":{
     "CuentaNoticias":{
         "ruta":"/cuentaNoticias",
-        "valor": "En mi caso valdria 2"
+        "valor": "El valor del tamaño"
     },
     "CrearNoticia":
                { "ruta": "/crearNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4>",
-                 "valor": "Noticias:<En mi caso valdria 3>"},
+                 "valor": "Noticias:<El tamaño aumenta>"},
     "EditarNoticia":
                 {"ruta": "/editarNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
                 "valor": "{Editado: True o False}"
                 },
     "EliminarNoticia":{
         "ruta":"/eliminarNoticia<&indice=valor2>",
-        "valor": "{El valor es 2}"
+        "valor": "{El valor de tamaño disminuye}"
     },
     "MostrarNoticiasCategoria":{
         "ruta":"/mostrarNoticiasCategoira<&categoria=valor2>",
-        "valor": "{Numero:<en mi ejemplo 1>}"
+        "valor": "{Numero:<muestra el numero de noticias de esa categoria>}"
     }
     }
     })
