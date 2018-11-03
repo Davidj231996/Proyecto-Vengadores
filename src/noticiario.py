@@ -47,7 +47,7 @@ class Noticiario():
 		with open('data/noticias.json', 'w') as outfile:
 			json.dump(self.noticias, outfile)
 
-		return self.__noticiai
+		return True
 
 	def editarNoticia(self,titulo,descripcion,categoria,indice):
 		if(len(titulo) < 10):
