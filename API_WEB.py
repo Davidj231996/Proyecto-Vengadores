@@ -41,7 +41,7 @@ def CuentaNoticias():
     return jsonify(n.cuentaNoticias())
 
 
-@app.route("/crearNoticia")
+@app.route("/crearNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4>")
 def CrearNoticia():
     if request.args.get('titulo'):
         titulo=(request.args.get('titulo'))
