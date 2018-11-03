@@ -43,15 +43,15 @@ def CuentaNoticias():
 
 @app.route("/crearNoticia")
 def CrearNoticia():
-    if request.args.get('titulo'):
+    if not request.args.get('titulo') == None:
         titulo=(request.args.get('titulo'))
     else:
         return False
-    if request.args.get('descripcion'):
+    if not request.args.get('descripcion') == None:
         descripcion=(request.args.get('descripcion'))
     else:
         return False
-    if request.args.get('categoria'):
+    if not request.args.get('categoria') == None:
         categoria=(request.args.get('categoria'))
     else:
         return False
