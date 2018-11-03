@@ -19,7 +19,7 @@ def main():
         "valor": "En mi caso valdria 2"
     },
     "CrearNoticia":
-               { "ruta": "/crearNoticia",
+               { "ruta": "/crearNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4>",
                  "valor": "Noticias:<En mi caso valdria 3>"},
     "EditarNoticia":
                 {"ruta": "/editarNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
@@ -43,7 +43,19 @@ def CuentaNoticias():
 
 @app.route("/crearNoticia")
 def CrearNoticia():
-    return jsonify(Noticias=n.crear_Noticia())
+    if request.args.get('titulo'):
+        titulo=(request.args.get('titulo'))
+    else:
+        return False
+    if request.args.get('descripcion'):
+        descripcion=(request.args.get('descripcion'))
+    else:
+        return False
+    if request.args.get('categoria'):
+        categoria=(request.args.get('categoria'))
+    else:
+        return False
+    return jsonify(Noticias=n.crear_Noticia(titulo,descripcion,categoria))
 
 @app.route("/editarNoticia")
 def EditarNoticia():
