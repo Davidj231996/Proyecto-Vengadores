@@ -1,5 +1,5 @@
 import pytest
-from pruebas import Noticiario
+from noticiario import Noticiario
 
 def test_inicializar():
 	n=Noticiario()
