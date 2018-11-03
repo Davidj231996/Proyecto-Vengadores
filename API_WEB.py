@@ -16,18 +16,18 @@ def main():
     "ejemplos de Servicios":{
     "CuentaNoticias":{
         "ruta":"/cuentaNoticias",
-        "valor": "El valor del tamaño"
+        "valor": "El valor de la cantidad de noticias"
     },
     "CrearNoticia":
                { "ruta": "/crearNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4>",
-                 "valor": "Noticias:<El tamaño aumenta>"},
+                 "valor": "Noticias:<La cantidad aumenta>"},
     "EditarNoticia":
                 {"ruta": "/editarNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
                 "valor": "{Editado: True o False}"
                 },
     "EliminarNoticia":{
         "ruta":"/eliminarNoticia<&indice=valor2>",
-        "valor": "{El valor de tamaño disminuye}"
+        "valor": "{El valor de la cantidad disminuye}"
     },
     "MostrarNoticiasCategoria":{
         "ruta":"/mostrarNoticiasCategoira<&categoria=valor2>",
