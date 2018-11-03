@@ -44,3 +44,7 @@ categorias.
 ## Por qué he elegido estas herramientas de test e integración continua:
 
 [Visitar](https://davidj231996.github.io/Proyecto-Vengadores/docs/explicacion)
+
+## Heroku
+
+Voy a usar heroku por ser gratis y debido a los fallos que me ha dado Azure para añadirme al curso creado para la asignatura.
