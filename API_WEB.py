@@ -16,11 +16,11 @@ def main():
     "ejemplos de Servicios":{
     "CuentaNoticias":{
         "ruta":"/cuentaNoticias",
-        "valor": "En mi caso valdría 2"
+        "valor": "En mi caso valdria 2"
     },
     "CrearNoticia":
                { "ruta": "/crearNoticia",
-                 "valor": "Noticias:<En mi caso valdría 3>"},
+                 "valor": "Noticias:<En mi caso valdria 3>"},
     "EditarNoticia":
                 {"ruta": "/editarNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
                 "valor": "{Editado: True o False}"
