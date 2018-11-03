@@ -49,19 +49,19 @@ def CrearNoticia():
 def EditarNoticia():
     if request.args.get('titulo'):
         titulo=(request.args.get('titulo'))
-    elif:
+    else:
         return False
     if request.args.get('descripcion'):
         descripcion=(request.args.get('descripcion'))
-    elif:
+    else:
         return False
     if request.args.get('categoria'):
         categoria=(request.args.get('categoria'))
-    elif:
+    else:
         return False
     if request.args.get('indice'):
         indice=(request.args.get('indice'))
-    elif:
+    else:
         return False
     return jsonify(Editado=n.editarNoticia(titulo,descripcion,categoria,indice))
 
@@ -69,7 +69,7 @@ def EditarNoticia():
 def EliminarNoticia():
     if request.args.get('indice'):
         indice=request.args.get('indice')
-    elif:
+    else:
         return False
     return jsonify(n.eliminarNoticia(indice))
 
@@ -77,7 +77,7 @@ def EliminarNoticia():
 def MostrarNoticiasCategoria():
     if request.args.get('categoria'):
         categoria=request.args.get('categoria')
-    elif:
+    else:
         return False
     return jsonify(Numero=n.mostrarNoticiasCategoira(categoria))
 
