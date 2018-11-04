@@ -45,6 +45,12 @@ categorias.
 
 [Visitar](https://davidj231996.github.io/Proyecto-Vengadores/docs/explicacion)
 
-## Heroku
+## PaaS Elegido: Heroku
 
-Voy a usar heroku por ser gratis y debido a los fallos que me ha dado Azure para añadirme al curso creado para la asignatura.
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/apps/proyecto-vengadores/deploy/github)
+
+Voy a usar heroku por ser gratis y sencillo de usar.
+
+Despliegue: [Proyecto-Vengadores](https://proyecto-vengadores.herokuapp.com/)
+
+[Documentación heroku](https://github.com/Davidj231996/Proyecto-Vengadores/tree/master/docs/heroku.md)
