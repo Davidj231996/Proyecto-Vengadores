@@ -47,7 +47,7 @@ categorias.
 
 ## PaaS Elegido: Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/apps/proyecto-vengadores/deploy/github)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 Voy a usar heroku por ser gratis y sencillo de usar.
 

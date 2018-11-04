@@ -1,4 +1,4 @@
-# Guía instalación Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/apps/proyecto-vengadores/deploy/github)
+# Guía instalación Heroku [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## Instalación
 
@@ -24,7 +24,7 @@ El despliegue lo vamos a hacer desde la página web. Los pasos a seguir son:
 
 El resultado final sería el siguiente:
 
-![img](https://github.com/Davidj231996/Proyecto-Vengadores/tree/master/docs/Imagenes/heroku.png)
+![img](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/heroku.png)
 
 Le damos a "Desplegar Rama", y si todo sale correcto nuestra aplicación estará lista y podremos acceder a ella.
 
