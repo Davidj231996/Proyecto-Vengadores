@@ -19,14 +19,14 @@ def main():
         "valor": "El valor de la cantidad de noticias"
     },
     "CrearNoticia":
-               { "ruta": "/crearNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4>",
+               { "ruta": "/crearNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4>",
                  "valor": "Noticias:<La cantidad aumenta>"},
     "EditarNoticia":
-                {"ruta": "/editarNoticia<&titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
+                {"ruta": "/editarNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
                 "valor": "{Editado: True o False}"
                 },
     "EliminarNoticia":{
-        "ruta":"/eliminarNoticia<&indice=valor2>",
+        "ruta":"/eliminarNoticia<?indice=valor2>",
         "valor": "{El valor de la cantidad disminuye}"
     },
     "MostrarNoticiasCategoria":{
