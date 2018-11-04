@@ -90,7 +90,7 @@ def MostrarNoticiasCategoria():
     if request.args.get('categoria'):
         categoria=request.args.get('categoria')
     else:
-        return 0
+        return jsonify(Numero=0)
     return jsonify(Numero=n.mostrarNoticiasCategoira(categoria))
 
 @app.errorhandler(404)
