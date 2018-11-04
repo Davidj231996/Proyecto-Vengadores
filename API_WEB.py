@@ -46,15 +46,15 @@ def CrearNoticia():
     if not request.args.get('titulo') == None:
         titulo=(request.args.get('titulo'))
     else:
-        return False
+        return jsonify(False)
     if not request.args.get('descripcion') == None:
         descripcion=(request.args.get('descripcion'))
     else:
-        return False
+        return jsonify(False)
     if not request.args.get('categoria') == None:
         categoria=(request.args.get('categoria'))
     else:
-        return False
+        return jsonify(False)
     return jsonify(Noticias=n.crear_Noticia(titulo,descripcion,categoria))
 
 @app.route("/editarNoticia")
@@ -62,19 +62,19 @@ def EditarNoticia():
     if request.args.get('titulo'):
         titulo=(request.args.get('titulo'))
     else:
-        return False
+        return jsonify(False)
     if request.args.get('descripcion'):
         descripcion=(request.args.get('descripcion'))
     else:
-        return False
+        return jsonify(False)
     if request.args.get('categoria'):
         categoria=(request.args.get('categoria'))
     else:
-        return False
+        return jsonify(False)
     if request.args.get('indice'):
         indice=(request.args.get('indice'))
     else:
-        return False
+        return jsonify(False)
     return jsonify(Editado=n.editarNoticia(titulo,descripcion,categoria,indice))
 
 @app.route("/eliminarNoticia")
@@ -82,7 +82,7 @@ def EliminarNoticia():
     if request.args.get('indice'):
         indice=request.args.get('indice')
     else:
-        return False
+        return jsonify(False)
     return jsonify(n.eliminarNoticia(indice))
 
 @app.route("/mostrarNoticiasCategoira")
