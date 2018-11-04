@@ -30,7 +30,7 @@ def main():
         "valor": "{El valor de la cantidad disminuye}"
     },
     "MostrarNoticiasCategoria":{
-        "ruta":"/mostrarNoticiasCategoira<&categoria=valor2>",
+        "ruta":"/mostrarNoticiasCategoira<?categoria=valor2>",
         "valor": "{Numero:<muestra el numero de noticias de esa categoria>}"
     }
     }
@@ -90,7 +90,7 @@ def MostrarNoticiasCategoria():
     if request.args.get('categoria'):
         categoria=request.args.get('categoria')
     else:
-        return False
+        return 0
     return jsonify(Numero=n.mostrarNoticiasCategoira(categoria))
 
 @app.errorhandler(404)
