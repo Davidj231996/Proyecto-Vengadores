@@ -72,7 +72,7 @@ def EditarNoticia():
     else:
         return jsonify(False)
     if request.args.get('indice'):
-        indice=(request.args.get('indice'))
+        indice=int(request.args.get('indice'))
     else:
         return jsonify(False)
     return jsonify(Editado=n.editarNoticia(titulo,descripcion,categoria,indice))
@@ -80,7 +80,7 @@ def EditarNoticia():
 @app.route("/eliminarNoticia")
 def EliminarNoticia():
     if request.args.get('indice'):
-        indice=request.args.get('indice')
+        indice=int(request.args.get('indice'))
     else:
         return jsonify(False)
     return jsonify(n.eliminarNoticia(indice))
