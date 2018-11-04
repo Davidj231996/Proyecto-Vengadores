@@ -3,7 +3,7 @@ import os
 
 class Noticiario():
 	"""Clase para el microservicio Noticiario"""
-
+	#Método para inicializar la clase
 	def __init__(self):
 		self.__noticiai=0
 		try:
@@ -22,15 +22,18 @@ class Noticiario():
 		except IOError as fallo:
 			print("Error {} leyendo hitos.json".format( fallo ) )
 
+	#Método que comprueba si la categoria está en el archivo categorias.json
 	def categoria_correcta(self,categoria):
 		for i in self.categorias:
 			if(i == categoria):
 				return True
 		return False
 
+	#Método que cuenta el número de noticias que hay en el archivo noticias.json
 	def cuentaNoticias(self):
 		return len(self.noticias)
 
+	#Método que crea una noticia y la añade al archivo json
 	def crear_Noticia(self,titulo,descripcion,categoria):
 		if(len(titulo) < 10):
 			return False
@@ -49,6 +52,7 @@ class Noticiario():
 
 		return True
 
+	#Método que edita una de las noticias del archivo json
 	def editarNoticia(self,titulo,descripcion,categoria,indice):
 		if(len(titulo) < 10):
 			return False
@@ -75,6 +79,7 @@ class Noticiario():
 
 		return True
 
+	#Método que elimina una de las noticias del archivo json
 	def eliminarNoticia(self,indice):
 		if(indice<=0 or indice>=len(self.noticias)):
 			return False
@@ -83,6 +88,7 @@ class Noticiario():
 
 		return len(self.noticias)
 
+	#Método que muestra las noticias de cierta categoria
 	def mostrarNoticiasCategoria(self,categoria):
 		indice=0
 		num_noticias=0
