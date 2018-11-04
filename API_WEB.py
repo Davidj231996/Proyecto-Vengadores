@@ -91,7 +91,7 @@ def MostrarNoticiasCategoria():
         categoria=request.args.get('categoria')
     else:
         return jsonify(Numero=0)
-    return jsonify(Numero=n.mostrarNoticiasCategoira(categoria))
+    return jsonify(Numero=n.mostrarNoticiasCategoria(categoria))
 
 @app.errorhandler(404)
 def page_not_found(error):
