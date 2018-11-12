@@ -1,9 +1,11 @@
 FROM python:3
 
-WORKDIR /
+WORKDIR .
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
 
 ENV PORT 80
 CMD ["python", "API_WEB.py"]
