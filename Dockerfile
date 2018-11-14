@@ -1,12 +1,10 @@
-FROM python:3
+FROM python:latest
 
-WORKDIR .
-
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /
 
 COPY . .
+RUN pip install --no-cache-dir -r requirements.txt
 
-ENV PORT 80
-CMD ["python", "API_WEB.py"]
 EXPOSE 80
+
+CMD gunicorn -b 0.0.0.0:80 API_WEB:app
