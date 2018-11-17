@@ -35,6 +35,6 @@ Resultado final:
 
 App: https://proyecto-vengadores-iv.herokuapp.com
 
-## Orden para el entorno se pueda descargar con una sola orden de DockerHub.
+## Orden para que el entorno se pueda descargar de DockerHub.
 
 *docker pull davidj231996/proyecto-vengadores*
