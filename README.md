@@ -54,3 +54,9 @@ Voy a usar heroku por ser gratis y sencillo de usar.
 Despliegue: [Proyecto-Vengadores](https://proyecto-vengadores.herokuapp.com/)
 
 [Documentación heroku](https://github.com/Davidj231996/Proyecto-Vengadores/tree/master/docs/heroku.md)
+
+## Contenedor y despliegue
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+[Documentación Docker](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/docker.md)
