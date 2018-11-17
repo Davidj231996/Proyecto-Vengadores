@@ -13,6 +13,8 @@ Pasos a seguir:
 3. Crear un repositorio público con integración continua desde su menú de navegación.
 ![Docker](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/docker.png)
 
+Primero, la orden para descargar la imagén última de python. Segundo, establecemos el directorio de trabajop en */*. Tercero, copiamos todo el repositorio en la imagén y instalamos lo que hay en *requirements.txt*. Cuarto, abrimos el puerto 80. Por último, ejecutamos gunicorn en el puerto 80 sobre *API_WEB.py, su app*.
+
 El resultado sería el siguiente:
 
 ![Contenedor](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/contenedor.PNG)
