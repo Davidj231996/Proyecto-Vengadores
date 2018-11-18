@@ -36,6 +36,10 @@ def main():
     }
     })
 
+@app.route("/status")
+def status():
+    return jsonify({"status":"OK"})
+
 @app.route("/cuentaNoticias")
 def CuentaNoticias():
     return jsonify(n.cuentaNoticias())
