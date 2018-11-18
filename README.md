@@ -63,4 +63,4 @@ En la [Documentación](https://github.com/Davidj231996/Proyecto-Vengadores/blob/
 
 Contenedor: [Proyecto-Vengadores](https://docker-proyecto-vengadores.herokuapp.com/)
 
-Repositorio en Docker Hub: https://dashboard.heroku.com/apps/docker-proyecto-vengadores
+Repositorio en Docker Hub: https://hub.docker.com/r/davidj231996/proyecto-vengadores/builds/
