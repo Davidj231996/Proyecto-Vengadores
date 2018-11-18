@@ -59,8 +59,12 @@ Despliegue: [Proyecto-Vengadores](https://proyecto-vengadores.herokuapp.com/)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-[Documentación Docker](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/docker.md)
+En la [Documentación](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/docker.md) viene explicado paso a paso la creación del contenedor y su despliegue.
 
-[Despliegue en Docker](https://hub.docker.com/r/davidj231996/proyecto-vengadores/)
+Contenedor: https://proyecto-vengadores-iv.herokuapp.com
 
+<<<<<<< HEAD
 Contenedor: [Proyecto-Vengadores](https://proyecto-vengadores-iv.herokuapp.com)
+=======
+Repositorio en Docker Hub: https://hub.docker.com/r/davidj231996/proyecto-vengadores/)
+>>>>>>> 4e5c78d6ebd16955e50fbca357416d56661eab07
