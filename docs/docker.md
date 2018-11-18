@@ -35,7 +35,7 @@ Resultado final:
 
 ![Aplicación](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/contenedor_app.PNG)
 
-App: https://proyecto-vengadores-iv.herokuapp.com
+Contenedor: https://proyecto-vengadores-iv.herokuapp.com
 
 ## Orden para que el entorno se pueda descargar de DockerHub.
 
