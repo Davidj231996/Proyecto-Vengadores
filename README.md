@@ -18,8 +18,6 @@ Estas son las herramientas que voy a usar para el proyecto:
 
 - Flask, framework.
 
-- JSON, lenguaje para el intercambio de información.
-
 - Unittest, como biblioteca para los tests.
 
 ## Instalación de las herramientas necesarias
