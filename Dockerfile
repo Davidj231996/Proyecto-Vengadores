@@ -1,4 +1,4 @@
-FROM python:3.6-slim-stretch
+FROM python:latest
 
 WORKDIR /
 
@@ -7,4 +7,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 80
 
-CMD gunicorn api_web:app --log-file -
+CMD web: gunicorn api_web:app --log-file -
