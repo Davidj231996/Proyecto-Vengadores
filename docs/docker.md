@@ -10,6 +10,8 @@ Pasos a seguir:
 2. Crear un dockerfile como el siguiente:
 ![Dockerfile](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/dockerfile.PNG)
 
+Usaremos la imagen "python:3.6-slim-stretch" porque es ligera como nos indica su nombre "slim", y porque nuestro servicio está basado en python.
+
 3. Crear un repositorio público con integración continua desde su menú de navegación.
 ![Docker](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/docker.png)
 
