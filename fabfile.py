@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 # Fabfile to:
 #    - Borrar el microservicio
 #    - Actualizar el microservicio
@@ -9,7 +11,7 @@ from fabric.api import *
 def Borrar():
 
     # Borramos antiguo codigo
-    run('rm -rf Proyecto-IV-Porra-Deportiva-')
+    run('rm -rf Proyecto-Vengadores')
 
 
 def Actualizar():
@@ -18,13 +20,13 @@ def Actualizar():
     Borrar
 
     # Descargamos nuevo repositorio
-    run('git clone https://github.com/iMiguel10/Proyecto-IV-Porra-Deportiva-.git')  
+    run('git clone https://github.com/Davidj231996/Proyecto-Vengadores.git')  
 
     # Instalamos requirements
-    run('pip3 install -r Proyecto-IV-Porra-Deportiva-/requirements.txt')
+    run('pip3 install -r Proyecto-Vengadores/requirements.txt')
 
 
 def Iniciar():
 
      # Iniciamos el servicio web
-     run('cd Proyecto-IV-Porra-Deportiva-/src/ && sudo gunicorn porradepapp:app -b 0.0.0.0:80')
+     run('cd Proyecto-Vengadores && sudo gunicorn api_web:app -b 0.0.0.0:80')
