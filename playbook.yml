@@ -1,5 +1,5 @@
-- hosts: noticiarioiv
-  become: yes
+- hosts: noticiario
+  sudo: yes
   remote_user: vagrant
 
   tasks:
