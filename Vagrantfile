@@ -11,7 +11,7 @@ Vagrant.configure('2') do |config|
     azure.client_secret = "cafe051e-b997-406d-8384-736efa21c60c"
     azure.subscription_id = "60538fec-4301-4eee-b463-534ddc71e8a4"
 
-    azure.vm_name = 'noticiarioiv'
+    azure.vm_name = 'noticiario'
     azure.vm_size = 'Standard_B1s'
     azure.tcp_endpoints = '80'
 
