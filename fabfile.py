@@ -1,12 +1,6 @@
 #!/usr/bin/env python
 
-# Fabfile to:
-#    - Borrar el microservicio
-#    - Actualizar el microservicio
-#    - Iniciar el microservicio
-
-# Import Fabric's API module
-# from fabric.api import *
+# Import modules
 from fabric import task
 from fabric.connection import Connection
 
@@ -42,18 +36,24 @@ def Iniciar(ctx):
 
 @task
 def Parar(ctx):
+
+   #Paramos elñ servicio web
    with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
       c.run("sudo kill $(ps -ef | grep gunicorn | awk '{print $2}')")
 
 
 @task
 def Prueba(ctx):
+
+   #Realizamos el test
    with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
       with c.cd('Proyecto-Vengadores'):
          c.run('pytest')
 
 @task
 def Instalar(ctx):
+
+   #Clonamos el repositorio en la MV
    with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
       c.run('git clone https://github.com/Davidj231996/Proyecto-Vengadores.git')
       c.run('sudo pip3 install -r Proyecto-Vengadores/requirements.txt')
