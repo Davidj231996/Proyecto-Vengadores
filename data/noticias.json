@@ -1,10 +1,1 @@
-[{
-	"titulo": "El golf",
-	"noticia": "El golf es un deporte en aumento",
-	"categoria": "Golf"
-},
-{
-	"titulo": "La NBA, la mejor liga del mundo",
-	"noticia": "La NBA está considerada como la mejor liga del mundo de baloncesto",
-	"categoria": "NBA"
-}]
+[{"titulo": "El golf 2018", "noticia": "El golf es un deporte en aumento", "categoria": "Golf", "descripcion": "El golf es un deporte en disminuci\u00f3n"}, {"titulo": "La NBA, la mejor liga del mundo", "noticia": "La NBA est\u00e1 considerada como la mejor liga del mundo de baloncesto", "categoria": "NBA"}, {"titulo": "El Clasico mas importante", "descripcion": "El Clasico del 28-O es de vital importancia para ambos equipos", "categoria": "Futbol"}, {"titulo": "El Clasico mas importante", "descripcion": "El Clasico del 28-O es de vital importancia para ambos equipos", "categoria": "Futbol"}, {"titulo": "El Clasico mas importante", "descripcion": "El Clasico del 28-O es de vital importancia para ambos equipos", "categoria": "Futbol"}]
