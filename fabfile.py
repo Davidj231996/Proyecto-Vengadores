@@ -8,7 +8,7 @@ from fabric.connection import Connection
 def Borrar(ctx):
 
     # Borramos antiguo codigo
-    with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+    with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
        c.run('sudo rm -rf Proyecto-Vengadores')
 
 @task
@@ -18,7 +18,7 @@ def Actualizar(ctx):
     Borrar(ctx)
 
     # Descargamos nuevo repositorio
-    with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+    with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
        c.run('git clone https://github.com/Davidj231996/Proyecto-Vengadores.git')  
 
        # Instalamos requirements
@@ -28,9 +28,8 @@ def Actualizar(ctx):
 def Iniciar(ctx):
 
      # Iniciamos el servicio web
-     with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+     with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
           with c.cd('Proyecto-Vengadores'):
-               c.run('ls')
                c.run('sudo gunicorn api_web:app -b 0.0.0.0:80')
 
 
@@ -38,7 +37,7 @@ def Iniciar(ctx):
 def Parar(ctx):
 
    #Paramos elñ servicio web
-   with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+   with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
       c.run("sudo kill $(ps -ef | grep gunicorn | awk '{print $2}')")
 
 
@@ -46,7 +45,7 @@ def Parar(ctx):
 def Prueba(ctx):
 
    #Realizamos el test
-   with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+   with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
       with c.cd('Proyecto-Vengadores'):
          c.run('pytest')
 
@@ -54,6 +53,6 @@ def Prueba(ctx):
 def Instalar(ctx):
 
    #Clonamos el repositorio en la MV
-   with Connection('noticiario.westus.cloudapp.azure.com',user='vagrant') as c:
+   with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
       c.run('git clone https://github.com/Davidj231996/Proyecto-Vengadores.git')
       c.run('sudo pip3 install -r Proyecto-Vengadores/requirements.txt')
