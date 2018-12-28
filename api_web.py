@@ -14,26 +14,32 @@ def main():
     return jsonify({
     "status": "OK",
     "ejemplos de Servicios":{
-    "CuentaNoticias":{
-        "ruta":"/cuentaNoticias",
-        "valor": "El valor de la cantidad de noticias"
-    },
-    "CrearNoticia":
+        "GET":{
+            "CuentaNoticias":{
+                "ruta":"/cuentaNoticias",
+                "valor": "El valor de la cantidad de noticias"
+            },
+            "MostrarNoticiasCategoria":{
+                "ruta":"/mostrarNoticiasCategoira<?categoria=valor2>",
+                "valor": "{Numero:<muestra el numero de noticias de esa categoria>}"
+            }
+        },
+        "POST":{
+            "CrearNoticia":
                { "ruta": "/crearNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4>",
-                 "valor": "Noticias:<La cantidad aumenta>"},
-    "EditarNoticia":
+                 "valor": "Noticias:<La cantidad aumenta>"}
+        },
+        "PUT":{
+            "EditarNoticia":
                 {"ruta": "/editarNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
-                "valor": "{Editado: True o False}"
-                },
-    "EliminarNoticia":{
-        "ruta":"/eliminarNoticia<?indice=valor2>",
-        "valor": "{El valor de la cantidad disminuye}"
-    },
-    "MostrarNoticiasCategoria":{
-        "ruta":"/mostrarNoticiasCategoira<?categoria=valor2>",
-        "valor": "{Numero:<muestra el numero de noticias de esa categoria>}"
-    }
-    }
+                "valor": "{Editado: True o False}"}            }
+        },
+        "DELETE":{
+            "EliminarNoticia":{
+                "ruta":"/eliminarNoticia<?indice=valor2>",
+                "valor": "{El valor de la cantidad disminuye}"
+            }    
+        }
     })
 
 @app.route("/status")
