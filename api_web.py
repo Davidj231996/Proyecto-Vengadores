@@ -22,26 +22,33 @@ def main():
             "MostrarNoticiasCategoria":{
                 "ruta":"/mostrarNoticiasCategoira<?categoria=valor2>",
                 "valor": "{Numero:<muestra el numero de noticias de esa categoria>}"
-            }
+            },
+            "Status":{
+                "ruta":"/status",
+                "valor":"OK"
         },
         "POST":{
             "CrearNoticia":
-               { "ruta": "/crearNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4>",
+               { "ruta": "/crearNoticia",
+                 "parametros post": "titulo=valor1, descripcion=valor2, categoria=valor3",
                  "valor": "Noticias:<La cantidad aumenta>"}
         },
         "PUT":{
             "EditarNoticia":
-                {"ruta": "/editarNoticia<?titulo=valor2&descripcion=valor3&categoria=valor4&indice=valor5>",
+                {"ruta": "/editarNoticia",
+                "parametros put":"titulo=valor1, descripcion=valor2, categoria=valor3, indice=valor4",
                 "valor": "{Editado: True o False}"}            }
         },
         "DELETE":{
             "EliminarNoticia":{
-                "ruta":"/eliminarNoticia<?indice=valor2>",
+                "ruta":"/eliminarNoticia",
+                "parametros delete":"indice=valor1",
                 "valor": "{El valor de la cantidad disminuye}"
             }    
         }
     })
 
+#GET
 @app.route("/status")
 def status():
     return jsonify({"status":"OK"})
@@ -50,51 +57,6 @@ def status():
 def CuentaNoticias():
     return jsonify(n.cuentaNoticias())
 
-
-@app.route("/crearNoticia")
-def CrearNoticia():
-    if not request.args.get('titulo') == None:
-        titulo=(request.args.get('titulo'))
-    else:
-        return jsonify(False)
-    if not request.args.get('descripcion') == None:
-        descripcion=(request.args.get('descripcion'))
-    else:
-        return jsonify(False)
-    if not request.args.get('categoria') == None:
-        categoria=(request.args.get('categoria'))
-    else:
-        return jsonify(False)
-    return jsonify(Noticias=n.crear_Noticia(titulo,descripcion,categoria))
-
-@app.route("/editarNoticia")
-def EditarNoticia():
-    if request.args.get('titulo'):
-        titulo=(request.args.get('titulo'))
-    else:
-        return jsonify(False)
-    if request.args.get('descripcion'):
-        descripcion=(request.args.get('descripcion'))
-    else:
-        return jsonify(False)
-    if request.args.get('categoria'):
-        categoria=(request.args.get('categoria'))
-    else:
-        return jsonify(False)
-    if request.args.get('indice'):
-        indice=int(request.args.get('indice'))
-    else:
-        return jsonify(False)
-    return jsonify(Editado=n.editarNoticia(titulo,descripcion,categoria,indice))
-
-@app.route("/eliminarNoticia")
-def EliminarNoticia():
-    if request.args.get('indice'):
-        indice=int(request.args.get('indice'))
-    else:
-        return jsonify(False)
-    return jsonify(n.eliminarNoticia(indice))
-
 @app.route("/mostrarNoticiasCategoira")
 def MostrarNoticiasCategoria():
     if request.args.get('categoria'):
@@ -102,6 +64,35 @@ def MostrarNoticiasCategoria():
     else:
         return jsonify(Numero=0)
     return jsonify(Numero=n.mostrarNoticiasCategoria(categoria))
+
+#POST
+@app.route("/crearNoticia", methods=["POST"])
+def CrearNoticia():
+    if request.method=="POST":
+        json_data = request.get_json()
+        titulo=json_data['titulo']
+        descripcion=json_data['descripcion']
+        categoria=json_data['categoria']
+    return jsonify(Noticias=n.crear_Noticia(titulo,descripcion,categoria))
+
+#PUT
+@app.route("/editarNoticia", methods=["PUT"])
+def EditarNoticia():
+    if request.method=="PUT":
+        json_data=request.get_json()
+        titulo=json_data['titulo']
+        descripcion=json_data['descripcion']
+        categoria=json_data['categoria']
+        indice=json_data['indice']
+    return jsonify(Editado=n.editarNoticia(titulo,descripcion,categoria,indice))
+
+#DELETE
+@app.route("/eliminarNoticia")
+def EliminarNoticia():
+    if request.method=="DELETE":
+        json_data=request.get_json()
+        indice=json_data['indice']
+    return jsonify(n.eliminarNoticia(indice))
 
 @app.errorhandler(404)
 def page_not_found(error):
