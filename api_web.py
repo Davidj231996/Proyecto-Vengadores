@@ -46,6 +46,7 @@ def main():
                 "valor": "{El valor de la cantidad disminuye}"
             }    
         }
+    }
     })
 
 #GET
