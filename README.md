@@ -62,3 +62,11 @@ En la [Documentación](https://github.com/Davidj231996/Proyecto-Vengadores/blob/
 Contenedor: [Proyecto-Vengadores](https://docker-proyecto-vengadores.herokuapp.com/)
 
 Repositorio en Docker Hub: https://hub.docker.com/r/davidj231996/proyecto-vengadores/builds/
+
+## Despliegue IaaS Vagrant
+
+Despliegue final: 168.62.219.34
+
+Para la realización de esta parte se ha creado una máquina virtual en Azure usando Vagrant. Además, se ha usado Ansible para su aprovisionamiento y Fabric para la automatización de su puesta en marcha e instalación.
+
+[Documentación Completa](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/azure.md)
