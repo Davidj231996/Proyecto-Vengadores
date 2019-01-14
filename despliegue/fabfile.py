@@ -7,6 +7,9 @@ from fabric.connection import Connection
 @task
 def Borrar(ctx):
 
+    # Paramos la ejecución
+    Parar(ctx)
+
     # Borramos antiguo codigo
     with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
        c.run('sudo rm -rf Proyecto-Vengadores')
@@ -36,7 +39,7 @@ def Iniciar(ctx):
 @task
 def Parar(ctx):
 
-   #Paramos elñ servicio web
+   #Paramos el servicio web
    with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
       c.run("sudo kill $(ps -ef | grep gunicorn | awk '{print $2}')")
 
@@ -48,11 +51,3 @@ def Prueba(ctx):
    with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
       with c.cd('Proyecto-Vengadores'):
          c.run('pytest')
-
-@task
-def Instalar(ctx):
-
-   #Clonamos el repositorio en la MV
-   with Connection('noticiarioiv1819.westus.cloudapp.azure.com',user='vagrant') as c:
-      c.run('git clone https://github.com/Davidj231996/Proyecto-Vengadores.git')
-      c.run('sudo pip3 install -r Proyecto-Vengadores/requirements.txt')

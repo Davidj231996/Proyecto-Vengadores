@@ -1,19 +1,20 @@
-- hosts: noticiario
-  sudo: yes
+- hosts: all
+  become: yes
+  become_method: sudo
   remote_user: vagrant
 
   tasks:
-  - name: Actualizar sistema
-    command: sudo apt-get update
-
-  - name: Instalar Git
-    command: sudo apt-get install -y git
-
-  - name: Instalar pip
-    command: sudo apt-get install -y python3-pip
+  - name: Instalar Git y Pip
+    become: yes
+    apt: name={{ item }} state=latest update_cache=yes
+    with_items:
+      - git
+      - python3-pip
 
   - name: Clonar nuestro repositorio de GitHub
+    become: yes
     git: repo=https://github.com/Davidj231996/Proyecto-Vengadores.git  dest=Proyecto-Vengadores/ force=yes
 
   - name: Instalar requirements
+    become: yes
     command: pip3 install -r Proyecto-Vengadores/requirements.txt
