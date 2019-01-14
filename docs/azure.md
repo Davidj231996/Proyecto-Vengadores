@@ -23,15 +23,19 @@ El script de ansible creado es el siguiente:
 
 Para ejecutar el script fuera del Vagrantfile se usa la orden `ansible-playbook playbook.yml`.
 
-Las primeras tres líneas del archivo son para la conexión a la máquina virtual. `hosts` nos indica el nombre del host al que conectar, en nuestro caso, lo que hemos añadido al archivo `/etc/ansible/hosts`; `sudo: yes` es para indicar que vamos a ejecutar las ordenes como sudo; y `remote_user`es el usuario con el que nos conectamos al host.
+Las primeras 4 líneas del archivo son para la conexión a la máquina virtual. `hosts` nos indica el nombre del host al que conectar, en nuestro caso, está puesto como `all` por si tenemos varios hosts en el archivo `/etc/ansible/hosts`; `become: yes` y `become_method: sudo` es para indicar que al invicor `become` en un task, significa que vamos a ejecutar las ordenes como sudo; y `remote_user`es el usuario con el que nos conectamos al host.
 
 El resto del archivo son los tasks o acciones que se hacen una vez conectados a la máquina virtual. En nuestro caso:
 
-- Actualizar el sistema.
-- Instalar Git.
-- Instalar Pip.
+- Instalar Git y Pip.
 - Clonar el repositorio Github.
 - Instalar requeriments.txt.
+
+Para la instalación de `Git` y `Pip`, se puede observar como se ha usado el módulo `apt` y no `command` como en el resto. El módulo `apt` de ansible, es como si ejecutaramos `apt-get con el módulo command`. Los parametros que se le añaden son:
+
+- Name: el nombre de lo que queremos instalar. En nuestro caso, `Git` y `Pip`.
+- State: el nivel de instalación. En nuestro caso, `latest`, que significa la última versión.
+- update_cache: para realizar un `apt-get update`antes de realizar la instalación. En nuestro caso, `yes`.
 
 ## 2. Creación de la máquina virtual y despliegue
 
@@ -55,10 +59,12 @@ Una vez realizado estos pasos, ya podemos crear nuestro Vagrantfile:
 
 ![Vagrantfile](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/vagrant.PNG)
 
-En el archivo indicamos que vamos a usar azure con `config.vm.box`. Le indicamos donde va a estar las claves ssh con `config.ssh.private_key_path`. Le indicamos que con el proveedor azure vamos a realizar lo siguiente:
+En el archivo indicamos que el nombre de la máquina virtual es azure con `config.vm.box`. Le indicamos donde va a estar las claves ssh con `config.ssh.private_key_path`. Con `config.vm.network "private_network", guest: 80, host: 80`, indicamos que vamos a usar una red privada usando el puerto 80, elegimos una red privada para evitar el acceso a nuestra máquina virtual desde internet. Con `config.vm.box_url`, indicamos que hemos usado el `dummy.box` de la url siguiente.Con `config.vm.synced_folder '.', '/vagrant', :disabled => true`, indicamos que no queremos que se realice la copia al levantar la máquina virtual.
+
+Le indicamos que con el proveedor azure vamos a realizar lo siguiente:
 
 - Le indicamos las claves de Azure previamente obtenidas.
-- Le indicamos el nombre de la máquina virtual, su tamaño y su puerto.
+- Le indicamos el nombre de la máquina virtual, su tamaño, su puerto para tcp, su localización, el urn del SO de Azure que usaremos y el grupo de recursos.
 
 Por último, le indicamos que hacer cuando indicamos la orden provision:
 
@@ -72,10 +78,11 @@ Para el despliegue es necesario crear un archivo fabfile.py, que nos permitirá 
 El archivo fabfile.py es el siguiente:
 
 ![Fabfile](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/fabfile.PNG)
-![Fabfile](https://github.com/Davidj231996/Proyecto-Vengadores/blob/master/docs/Imagenes/fabfile2.PNG)
 
-En este archivo establecemos los tasks a realizar con `@task` y una función con el parámetro `ctx` como nos indica que tenemos que hacer en el tutorial de Fabric.
+En este archivo establecemos los tasks a realizar con `@task` y una función con el parámetro `ctx` que hace referencia al Proxy de Contexto.
 
 En las funciones, primero conectamos usando `Connection`, le indicamos el host y el usuario. Una vez ya conectados, ejecutamos las órdenes necesarias en cada función.
 
-Para ejecutar el archivo desde fuera de la máquina virtual usamos la siguiente orden `fab -f fabfile.py -H vagrant@noticiarioiv1819.westus.cloudapp.azure.com <nombrefuncio>`.
+Para ejecutar el archivo desde fuera de la máquina virtual usamos la siguiente orden `fab -r ./despliegue/ -f fabfile.py -H vagrant@noticiarioiv1819.westus.cloudapp.azure.com <nombrefuncio>`.
+
+La opción `-r` cambia el directorio de trabajo al indicado. La opción `-f` indica el archivo de configuración a usar. La opción `-H` indica que vamos a realizar una conexión ssh con usuario@host. Y por último, la función a ejecutar.
