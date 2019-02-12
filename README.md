@@ -14,9 +14,9 @@ Estas son las herramientas que voy a usar para el proyecto:
 
 - MongoDB, para almacenar la información.
 
-- Python, lenguaje de programación.
+- Python, como lenguaje de programación.
 
-- Flask, framework.
+- Flask, como framework.
 
 - Unittest, como biblioteca para los tests.
 
